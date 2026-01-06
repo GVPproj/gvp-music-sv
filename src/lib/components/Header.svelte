@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { navLinks } from '$lib/data/navigation';
 	import SocialIcons from './SocialIcons.svelte';
 
@@ -23,7 +24,7 @@
 	<nav class="desktop-nav">
 		<ul>
 			{#each navLinks as link (link.href)}
-				<li><a href={link.href}>{link.label}</a></li>
+				<li><a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a></li>
 			{/each}
 			<SocialIcons />
 		</ul>
@@ -42,7 +43,7 @@
 	<nav class="mobile-nav" class:mobile-nav--open={isMenuOpen}>
 		<ul>
 			{#each navLinks as link (link.href)}
-				<li><a href={link.href}>{link.label}</a></li>
+				<li><a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a></li>
 			{/each}
 			<SocialIcons mobile={true} />
 		</ul>
@@ -117,6 +118,10 @@
 		color: var(--blue-light);
 	}
 
+	.desktop-nav li a.active {
+		font-weight: 600;
+	}
+
 	/* Mobile Nav */
 	.mobile-nav {
 		position: absolute;
@@ -156,6 +161,10 @@
 	.mobile-nav a:hover,
 	.mobile-nav a:focus {
 		color: var(--blue-light);
+	}
+
+	.mobile-nav a.active {
+		font-weight: 600;
 	}
 
 	/* Hamburger Menu */
