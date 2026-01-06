@@ -4,7 +4,7 @@
 
 	function formatAbout(text: string | null): string {
 		if (!text) return '';
-		return text.replace(/\r?\n/g, '<br><br>');
+		return text.replace(/\r?\n/g, '<br>');
 	}
 </script>
 
