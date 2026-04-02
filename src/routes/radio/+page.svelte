@@ -6,8 +6,6 @@
 	<title>Island City Radio - Graham Van Pelt</title>
 </svelte:head>
 
-<h1 class="no-margin-padding">Island City Radio</h1>
-<hr class="top-hr" />
 <p>
 	Montreal/Toronto/Salt Spring Island musician and DJ Graham Van Pelt plays and discusses his
 	favourite records and tracks. A loving and inclusive appreciation of scenes and genres from the

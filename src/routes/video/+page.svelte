@@ -6,9 +6,6 @@
 	<title>Videos - Graham Van Pelt</title>
 </svelte:head>
 
-<h1 class="no-margin-padding">Videos</h1>
-<hr class="top-hr" />
-
 <div class="video-container margin-top">
 	<YouTubeEmbed videoId="IB5KtubKv6s" title="Salt Spring: Sun and Shadow visualizer" />
 </div>

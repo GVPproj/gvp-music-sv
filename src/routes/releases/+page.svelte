@@ -12,9 +12,6 @@
 	<title>Releases - Graham Van Pelt</title>
 </svelte:head>
 
-<h1 class="no-margin-padding">Releases</h1>
-<hr class="top-hr" />
-
 {#each releases as release, i (release.album_id)}
 	<div class="release">
 		<h2>{release.display_title ?? release.title}</h2>

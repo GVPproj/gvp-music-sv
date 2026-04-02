@@ -7,9 +7,6 @@
 	<title>Film Scoring - Graham Van Pelt</title>
 </svelte:head>
 
-<h1 class="no-margin-padding">Film Scoring</h1>
-<hr class="top-hr" />
-
 <div class="video-container margin-top">
 	<VimeoEmbed videoId="187108162" />
 </div>

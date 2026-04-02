@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { navLinks } from '$lib/data/navigation';
 	import SocialIcons from './SocialIcons.svelte';
 
@@ -24,7 +24,7 @@
 	<nav class="desktop-nav">
 		<ul>
 			{#each navLinks as link (link.href)}
-				<li><a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a></li>
+				<li><a href={link.href} class:active={page.url.pathname === link.href}>{link.label}</a></li>
 			{/each}
 			<SocialIcons />
 		</ul>
@@ -43,7 +43,7 @@
 	<nav class="mobile-nav" class:mobile-nav--open={isMenuOpen}>
 		<ul>
 			{#each navLinks as link (link.href)}
-				<li><a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a></li>
+				<li><a href={link.href} class:active={page.url.pathname === link.href}>{link.label}</a></li>
 			{/each}
 			<SocialIcons mobile={true} />
 		</ul>
@@ -99,16 +99,16 @@
 		flex-direction: column;
 		align-items: flex-start;
 		height: 80%;
+		gap: 1px;
 	}
 
 	.desktop-nav li {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
+		font-size: 1rem;
+		/* margin-bottom: 0.5rem; */
 		letter-spacing: 2px;
 	}
 
 	.desktop-nav li a {
-		font-family: var(--mono-font-family);
 		letter-spacing: 1px;
 		transition: all 0.3s ease 0s;
 		text-decoration: none;
@@ -119,6 +119,7 @@
 	}
 
 	.desktop-nav li a.active {
+		color: var(--blue-dark);
 		font-weight: 600;
 	}
 
@@ -146,21 +147,16 @@
 
 	.mobile-nav li {
 		height: 7vh;
+		display: grid;
+		place-content: center;
 	}
 
 	.mobile-nav a {
-		font-family: var(--mono-font-family);
 		letter-spacing: 1px;
-		color: var(--blue-dark);
 		display: block;
 		background-color: var(--bg-color);
 		padding: 0 2rem 0 2rem;
 		margin: 1vh 0;
-	}
-
-	.mobile-nav a:hover,
-	.mobile-nav a:focus {
-		color: var(--blue-light);
 	}
 
 	.mobile-nav a.active {

@@ -8,6 +8,6 @@ export const navLinks: NavLink[] = [
 	{ href: '/video', label: 'Video' },
 	{ href: '/radio', label: 'Radio' },
 	{ href: '/film', label: 'Film' },
-	{ href: '/live', label: 'Live' },
+	// { href: '/live', label: 'Live' },
 	{ href: '/about', label: 'About' }
 ];
