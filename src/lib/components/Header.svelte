@@ -109,17 +109,18 @@
 	}
 
 	.desktop-nav li a {
+		color: var(--text-color);
 		letter-spacing: 1px;
 		transition: all 0.3s ease 0s;
 		text-decoration: none;
 	}
 
-	.desktop-nav li a:hover {
-		color: var(--blue-light);
+	.desktop-nav li a:hover,
+	.desktop-nav li a:focus {
+		font-weight: 600;
 	}
 
 	.desktop-nav li a.active {
-		color: var(--blue-dark);
 		font-weight: 600;
 	}
 
@@ -152,11 +153,17 @@
 	}
 
 	.mobile-nav a {
+		color: var(--text-color);
 		letter-spacing: 1px;
 		display: block;
 		background-color: var(--bg-color);
 		padding: 0 2rem 0 2rem;
 		margin: 1vh 0;
+	}
+
+	.mobile-nav a:hover,
+	.mobile-nav a:focus {
+		font-weight: 600;
 	}
 
 	.mobile-nav a.active {

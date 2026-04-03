@@ -52,11 +52,13 @@ footer {
 }
 
 a {
-	color: var(--text-color);
+	color: var(--blue-dark);
 	text-decoration: none;
 	transition: all 0.3s ease 0s;
 }
-a:hover {
+a:hover,
+a:active,
+a:focus {
 	color: var(--blue-light);
 }
 

@@ -1,6 +1,12 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__svelte__get-documentation",
+      "Bash(pnpm dlx:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "svelte"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
