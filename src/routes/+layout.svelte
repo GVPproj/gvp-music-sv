@@ -15,4 +15,4 @@
 	{@render children()}
 </main>
 
-<footer>&copy; GVP 2021</footer>
+<footer>&copy; GVP {new Date().getFullYear()}</footer>
