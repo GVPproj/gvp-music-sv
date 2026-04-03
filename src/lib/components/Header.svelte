@@ -77,7 +77,7 @@
 
 	/* Logo */
 	.logo {
-		width: clamp(150px, 150px, 11vw);
+		width: clamp(100px, 100px, 8vw);
 		height: auto;
 		margin: 5vh 0 0 2rem;
 		cursor: pointer;
@@ -87,14 +87,12 @@
 
 	/* Desktop Nav */
 	.desktop-nav {
-		width: 12rem;
 		height: 100vh;
 	}
 
 	.desktop-nav ul {
 		list-style: none;
 		padding: 2rem;
-		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -104,7 +102,6 @@
 
 	.desktop-nav li {
 		font-size: 1rem;
-		/* margin-bottom: 0.5rem; */
 		letter-spacing: 2px;
 	}
 
