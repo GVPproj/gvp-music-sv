@@ -6,6 +6,13 @@
 		if (!text) return '';
 		return text.replace(/\r?\n/g, '<br>');
 	}
+
+	function slugify(text: string): string {
+		return text
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '-')
+			.replace(/^-+|-+$/g, '');
+	}
 </script>
 
 <svelte:head>
@@ -13,8 +20,9 @@
 </svelte:head>
 
 {#each releases as release, i (release.album_id)}
-	<div class="release">
-		<h2>{release.display_title ?? release.title}</h2>
+	{@const slug = slugify(release.display_title ?? release.title)}
+	<div class="release" id={slug}>
+		<h2><a class="release-anchor" href="#{slug}">{release.display_title ?? release.title}</a></h2>
 		<h3>{release.display_date ?? release.release_date}</h3>
 		<div class="release-block">
 			<img
